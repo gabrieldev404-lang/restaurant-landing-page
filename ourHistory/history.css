@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Enriqueta", serif;
+}
+
+
+::selection {
+    background-color: #ffe39b;
+    color:black;
+}
+
+.hamburguer-area{
+    display:none;
+}
+
+
+.header{
+    background-color: #95671e;
+    text-shadow: 1px 1px 2px #ffcb5c;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #aaa;
+    padding: 0 60px;
+}
+
+
+.header ul{
+    display: flex;
+    gap:60px;
+    list-style: none;
+}
+
+
+.header ul li a {
+    position:relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.header ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+
+}
+
+.header ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.header li a:hover {
+    color:#ddd;
+    text-shadow: 2px 2px 3px #000000;
+    transition: ease 0.4s;
+}
+
+.header img{
+    width:80px;
+    box-shadow: 2px 2px 4px #000;
+}
+/*Title*/
+
+body {
+    background-color: #111; 
+}
+
+.title {
+    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+}
+
+.title h1 {
+    font-family: "Italianno";
+    font-size: 70px;
+    font-weight:500;
+    text-decoration: underline;
+    text-decoration-thickness:1px;
+    text-underline-offset: 6px;
+    text-shadow: 1px 2px 3px #95671e;
+    text-align: center;
+    color: #ddd;
+}
+
+/*Hystory area*/
+
+.history-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 550px;
+}
+
+.img {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width:50%;
+    height:100%;
+}
+
+.text {
+    display: flex;  
+    flex-direction: column;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    height: 580px;
+    box-shadow: 5px 5px 10px #95671D;
+    margin-left: -100px;
+    border: 1px solid #444;
+}
+
+.img img{
+    height:500px;
+    width:600px;
+}
+
+.text h1{
+    color: #ddd;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0px;
+}
+
+.text p {
+    color:#aaa;
+    font-size: 18px;
+    line-height: 25px;
+    margin:10px;
+}
+
+.rights {
+    color: #aaa;
+    margin:10px;
+    font-size: 15px;
+}
+
+
+@media(max-width:1439px) {
+    .history-content{
+        flex-direction: column;
+        height:auto;
+    }
+
+    .text {
+        margin-left: 0;
+        height:100%;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .img {
+        justify-content: center;
+    }
+
+    .img img {
+        width:100%;
+        height:100%;
+    }
+}
+
+
+@media(max-width:768px) {
+
+
+    .header ul.active{
+    display:flex;
+    }
+
+    .hamburguer-area .active-area.white{
+        background-color: #000;
+    }
+
+    .header {
+    padding: 0 30px;
+    }
+
+    .header ul{
+        position:absolute;
+        display:none;
+        flex-direction: column;
+        z-index:99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width:70vw;
+        height: calc(100vh - 80px);
+        top:80px;
+        right:0;
+        gap:40px;
+        padding-top: 30px;
+    }
+
+    .img {
+        width: 65%;
+    }
+
+    .hamburguer-area{
+        display:block;
+        height:40px;
+        width:40px;
+    }
+
+
+    .hamburguer-area .active-area{
+        background-color: #eee;
+        border: 1px solid black;
+        height:20%;
+        margin:5px 0;
+        width:100%;
+        border-radius: 10px;
+        
+    }
+
+    .header ul li a{
+        font-size: 21px;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #95671e;
+        margin-left: 50px;
+    }
+
+    .title h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .text h1{
+        font-size: 25px;
+    }
+
+    .text p {
+    font-size: 14px;
+    line-height: 23px;
+    }
+
+    .rights {
+    margin: 10px;
+    font-size: 10px;
+    }
+
+}
+
+@media(max-width:374px) {
+    .title h1 {
+        font-size: 35px;
+    }
+}
